@@ -1,0 +1,10 @@
+{
+  "name": "mindhop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Private local AI semantic search for Chrome history.",
+  "type": "module",
+  "scripts": {
+    "download-model": "node tools/download-model.mjs"
+  }
+}

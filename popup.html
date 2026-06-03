@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MindHop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="shell">
+        <header class="hero">
+            <div class="brand">
+                <img class="logo" src="assets/mindhop-logo.svg" alt="MindHop logo">
+                <div>
+                    <p class="eyebrow">Private AI memory</p>
+                    <h1>MindHop</h1>
+                </div>
+            </div>
+            <span id="statusPill" class="status-pill">Idle</span>
+        </header>
+
+        <section class="intro" aria-label="MindHop summary">
+            <p>Find pages by what you remember, even when you forgot the exact title or URL.</p>
+        </section>
+
+        <section class="search-panel" aria-label="Semantic history search">
+            <label for="searchInput">What are you trying to find?</label>
+            <div class="search-row">
+                <input
+                    type="text"
+                    id="searchInput"
+                    autocomplete="off"
+                    placeholder="the site where I studied matrix formulas"
+                >
+                <button id="searchBtn" type="button" title="Search history">
+                    Find
+                </button>
+            </div>
+        </section>
+
+        <section class="toolbar" aria-label="Index controls">
+            <button id="indexBtn" class="primary-action" type="button">Prepare memory</button>
+            <button id="refreshBtn" type="button">Sync latest</button>
+        </section>
+
+        <p id="message" class="message">Prepare your memory once, then search by meaning anytime.</p>
+        <div id="stats" class="stats">Private by default - history and AI vectors stay on this device.</div>
+        <div id="results" class="results"></div>
+
+        <section id="guide" class="guide" aria-label="How MindHop works">
+            <div class="guide-card">
+                <span class="step">1</span>
+                <div>
+                    <h2>Prepare your memory</h2>
+                    <p>MindHop scans recent history and creates local AI vectors on this device.</p>
+                </div>
+            </div>
+            <div class="guide-card">
+                <span class="step">2</span>
+                <div>
+                    <h2>Describe the page</h2>
+                    <p>Use natural language like a half-remembered thought, not exact keywords.</p>
+                </div>
+            </div>
+            <div class="guide-card">
+                <span class="step">3</span>
+                <div>
+                    <h2>Open the match</h2>
+                    <p>Results are ranked by meaning and stay private in your browser.</p>
+                </div>
+            </div>
+            <div class="examples" aria-label="Example searches">
+                <button class="example-chip" type="button">AI article about agents</button>
+                <button class="example-chip" type="button">matrix formula tutorial</button>
+                <button class="example-chip" type="button">pricing page with clean dashboard</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="popup.js" defer></script>
+</body>
+</html>
